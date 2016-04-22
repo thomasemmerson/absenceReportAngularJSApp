@@ -34,18 +34,28 @@
          			</th>
 					<th>Actions</th>
 				</tr>
-				<tr ng-repeat="absence in absences | orderBy:predicate:reverse">
-					<td>{{absence.name}}</td> 
-					<td>{{absence.type}}</td>     
-					<td>{{absence.start_date}}</td> 
-					<td>{{absence.start_time}}</td> 
-					<td>{{absence.end_date}}</td> 
+				<tr ng-repeat="absence in absences | orderBy:predicate:reverse" ng-class="{'editing-item': editing}">
+					<td>
+						{{absence.name}}
+					</td> 
+					<td>
+						{{absence.type}}
+					</td>     
+					<td>
+						{{absence.start_date}}</td> 
+					<td>
+						{{absence.start_time}}</td> 
+					<td>
+						{{absence.end_date}}</td> 
 					<td>{{absence.end_time}}</td> 
-					<td>{{absence.notes}}</td> 
+					<td>
+						{{absence.notes}}
+					    <input ng-blur="editing = false;" ng-show="editing" ng-model="absence.notes" type="text" />
+					</td> 
 					<td>{{absence.status}}</td>
 					<td>
 						<div class="actions">
-				            <a href="">Edit</a>
+				            <a href="" ng-click="editing = true">Edit</a>
 				            <a href="" ng-click="cancel(absence, $index)">Cancel</a>
 			            </div>
 		            </td>
