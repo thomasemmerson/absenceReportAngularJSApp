@@ -2,3 +2,30 @@
 	position: relative;
     top: -20px;
 }
+
+.jumbotron p {
+	display: inline-block;
+}
+
+tr {
+	text-align: left;
+}
+
+td {
+	padding: 15px 15px 15px 0px;
+}
+
+#notes {
+	width: 400px;
+}
+
+.sortorder {
+	display: inline-block;
+}
+
+.sortorder:after {
+  content: '\25b2';
+}
+.sortorder.reverse:after {
+  content: '\25bc';
+}
