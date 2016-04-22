@@ -42,17 +42,26 @@
 						{{absence.type}}
 					</td>     
 					<td>
-						{{absence.start_date}}</td> 
+						{{absence.start_date}}
+					    <input ng-blur="editing = false;" ng-show="editing" ng-model="absence.start_date" type="date" />						
+					</td> 
 					<td>
-						{{absence.start_time}}</td> 
+						{{absence.start_time}}
+					</td> 
 					<td>
-						{{absence.end_date}}</td> 
-					<td>{{absence.end_time}}</td> 
+						{{absence.end_date}}
+					    <input ng-blur="editing = false;" ng-show="editing" ng-model="absence.end_date" type="date" />							
+					</td> 
+					<td>
+						{{absence.end_time}}
+					</td> 
 					<td>
 						{{absence.notes}}
 					    <input ng-blur="editing = false;" ng-show="editing" ng-model="absence.notes" type="text" />
 					</td> 
-					<td>{{absence.status}}</td>
+					<td>
+						{{absence.status}}
+					</td>
 					<td>
 						<div class="actions">
 				            <a href="" ng-click="editing = true">Edit</a>
