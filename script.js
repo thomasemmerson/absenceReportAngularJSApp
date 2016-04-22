@@ -1,3 +1,4 @@
+'use strict';
 // script.js
 
     // create the module and name it scotchApp
