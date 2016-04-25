@@ -2,55 +2,32 @@
     <div class="jumbotron text-center">
         <h1>Book New Absence</h1>
 
-        <p>{{ message }}</p>
+        <p>Please use this form to book a new absence.</p>
         <div class="container">
-	        <table>
-				<tr>
-					<th>
-						<label>Type</label>
-	     			</th>
-					<th>
-						<label>Start Date</label>
-	     			</th>
-					<th>
-						<label>Start Time</label>
-	     			</th>
-					<th>
-						<label>End Date</label>
-	     			</th>			
-					<th>
-						<label>End Time</label>
-	     			</th>
-					<th>
-						<label>Notes</label>
-	     			</th>
-					<th>
-						<label></label>
-	     			</th>
-				</tr>				
-				<tr>
-					<th>
-						<input type="text"></input>
-	     			</th>
-					<th>
-						<input type="date"></input>
-	     			</th>
-					<th>
-						<input type="time"></input>
-	     			</th>			
-					<th>
-						<input type="date"></input>
-	     			</th>
-					<th>
-						<input type="time"></input>
-	     			</th>
-					<th>
-						<input type="textbox"></input>
-	     			</th>
-					<th>
-						<button>Book</button>
-	     			</th>	     			
-				</tr>
-			</table>
+			<form novalidate class="simple-form">
+				<label>Name</label>
+				<input type="text" ng-model="absence.name"></input>
+				<label>Type</label>
+				<input type="text" ng-model="absence.type"></input>
+				<label>Start Date</label>
+				<input type="date" ng-model="absence.start_date"></input>
+				<label>Start Time</label>
+				<input type="time" ng-model="absence.start_time"></input>
+				<label>End Date</label>
+				<input type="date" ng-model="absence.end_date"></input>
+				<label>End Time</label>
+				<input type="time" ng-model="absence.end_time"></input>
+				<label>Notes</label>
+				<input type="textbox" ng-model="absence.notes"></input>
+				<input type="submit" ng-click="update(absences)" value="Book" />
+				<input type="button" ng-click="reset()" value="Reset" />
+ 			</form>  
+ 			<p>Name: {{absence.name}}</p><br>		
+ 			<p>Type: {{absence.type}}</p><br>
+ 			<p>Start date: {{absence.start_date | date:"dd/MM/yyyy"}}</p><br>
+ 			<p>Start time: {{absence.start_time | date:"hh:mm"}}</p><br>
+ 			<p>End date: {{absence.end_date | date:"dd/MM/yyyy"}}</p><br>
+ 			<p>End time: {{absence.end_time | date:"hh:mm"}}</p><br>
+ 			<p>Notes: {{absence.notes}}</p><br>
 		</div>
     </div>

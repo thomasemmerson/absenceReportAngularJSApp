@@ -7,7 +7,7 @@ angular.module('scotchApp')
 	    //get absences list upon pageload
     	dataService.getAbsences(function(response) {
         	$scope.absences = response.data;
-        	console.log(response.data);
+        	//console.log($scope.absences[0]);
     	});
 
     	$scope.predicate = 'start_date';
