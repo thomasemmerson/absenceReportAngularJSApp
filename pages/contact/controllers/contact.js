@@ -26,8 +26,8 @@ angular.module('scotchApp')
 
 		}
 
-      	$scope.update = function(absences) {
-
+      	$scope.update = function(absence) {
+      		$scope.absence.push({name : $scope.name, start_date: $scope.start_date, start_time: $scope.start_time, end_date: $scope.end_date, end_time: $scope.end_time, type: $scope.type, notes: $scope.notes, "status" : "Requested"});
       	};
 
     })
