@@ -26,10 +26,7 @@ angular.module('scotchApp')
 		}
 
       	$scope.update = function(absences) {
-        	var absence = $scope.absence;
-        	//$scope.absences = $scope.absences.push(absence);
-        	$scope.absences.push;
-        	console.log(absence);
+        	console.log(absences);
         	$scope.reset();
       	};
 
