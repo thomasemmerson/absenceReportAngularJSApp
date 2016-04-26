@@ -3,17 +3,18 @@
 angular.module('scotchApp')
 
 	// create the controller and inject Angular's $scope
+	.controller('contactController', function($scope, dataService) {
 
 
+		//get absences list upon pageload
+    	dataService.getAbsences(function(response) {
+        	$scope.absences = response.data;
+    	});
 
-	.controller('contactController', function($scope) {
-		//console.log($scope.absence);		
-		$scope.absence = {"name" : "", "start_date" : "", "start_time" : "", "end_date" : "", "end_time" : "", "type" : "", "notes" : "", "status" : ""},
-		//console.log($scope.absence);
+		//$scope.absence = {"name" : "", "start_date" : "", "start_time" : "", "end_date" : "", "end_time" : "", "type" : "", "notes" : "", "status" : ""},
 
-		//console.log($scope.absences);
 		$scope.reset = function(absence){
-			console.log($scope.absence);	
+	
 			$scope.absence.name = "";	
 			$scope.absence.type = "";
 			$scope.absence.notes = "";
@@ -22,12 +23,11 @@ angular.module('scotchApp')
 			$scope.absence.end_date = "";	
 			$scope.absence.end_time = "";
 			$scope.absence.notes = "";	
-			console.log($scope.absence);	
+
 		}
 
       	$scope.update = function(absences) {
-        	console.log(absences);
-        	$scope.reset();
+
       	};
 
     })
