@@ -12,18 +12,18 @@
             // route for the home page
             .when('/', {
                 templateUrl : 'pages/home/home.html',
-                controller  : 'mainController as main'
+                controller  : "mainController as main"
             })
 
             // route for the about page
             .when('/about', {
                 templateUrl : 'pages/about/about.html',
-                controller  : 'aboutController as about'
+                controller  : "aboutController as about"
             })
 
             // route for the contact page
             .when('/contact', {
                 templateUrl : 'pages/contact/contact.html',
-                controller  : 'contactController as contact'
+                controller  : "contactController as contact"
             });
     });
