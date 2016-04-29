@@ -35,6 +35,11 @@ angular.module('scotchApp')
 
       	$scope.update = function(absence) {
       		console.log("This will push another object into the array.");
+      		$scope.new = $scope.newArray;
+      		$scope.absences.push($scope.new);
+            console.log($scope.absences);
+            alert("Your absence has been requested."); 
+            //$scope.reset($scope.new);		
       	};
 
     })
