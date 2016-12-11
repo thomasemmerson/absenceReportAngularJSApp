@@ -1,9 +1,9 @@
 {
   "version": "0.0.0",
   "private": true,
-  "name": "scotch",
+  "name": "absenceReportAngularJSApp",
   "description": "An application for AngularJS",
-  "repository": "https://github.com/thomasemmerson/scotch",
+  "repository": "https://github.com/thomasemmerson/absenceReportAngularJSApp",
   "license": "MIT",
   "devDependencies": {
     "karma": "^0.12.16",

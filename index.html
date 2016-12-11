@@ -1,6 +1,6 @@
 <!-- index.html -->
     <!DOCTYPE html>
-    <html ng-app="scotchApp">
+    <html ng-app="absenceReportAngularJSApp">
     <head>
       <!-- SCROLLS -->
       <!-- load bootstrap and fontawesome via CDN -->
@@ -15,9 +15,9 @@
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="script.js"></script>  
       <script src="pages/home/controllers/home.js" type="text/javascript"></script>
-      <script src="pages/contact/controllers/contact.js" type="text/javascript"></script>
-      <script src="pages/about/controllers/about.js" type="text/javascript"></script>
-      <script src="pages/about/services/data.js" type="text/javascript"></script>
+      <script src="pages/book/controllers/book.js" type="text/javascript"></script>
+      <script src="pages/absences/controllers/absences.js" type="text/javascript"></script>
+      <script src="pages/absences/services/data.js" type="text/javascript"></script>
 
       <!-- css stylesheet reference -->
       <link rel="stylesheet" type="text/css" href="styles/main.css">
@@ -36,9 +36,9 @@
                   </div>
 
                   <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
-                      <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-                      <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                      <li><a href="#/"><i class="fa fa-home"></i>Home</a></li>
+                      <li><a href="#absences"><i class="fa fa-shield"></i>Absences</a></li>
+                      <li><a href="#book"><i class="fa fa-comment"></i>Book</a></li>
                   </ul>
               </div>
             </nav>
@@ -50,7 +50,5 @@
           <!-- this is where content will be injected -->
           <div ng-view></div>
       </div>
-      <!-- livereload code snippet -->
-      <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
     </body>
     </html>

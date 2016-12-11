@@ -1,12 +1,12 @@
 'use strict';
 // script.js
 
-    // create the module and name it scotchApp
+    // create the module and name it absenceReportAngularJSApp
     // also include ngRoute for all our routing needs
-    var scotchApp = angular.module('scotchApp', ['ngRoute']);
+    var absenceReportAngularJSApp = angular.module('absenceReportAngularJSApp', ['ngRoute']);
 
     // configure our routes
-    scotchApp.config(function($routeProvider) {
+    absenceReportAngularJSApp.config(function($routeProvider) {
         $routeProvider
 
             // route for the home page
@@ -16,14 +16,14 @@
             })
 
             // route for the about page
-            .when('/about', {
-                templateUrl : 'pages/about/about.html',
-                controller  : "aboutController as about"
+            .when('/absences', {
+                templateUrl : 'pages/absences/absences.html',
+                controller  : "absencesController as absences"
             })
 
             // route for the contact page
             .when('/contact', {
-                templateUrl : 'pages/contact/contact.html',
-                controller  : "contactController as contact"
+                templateUrl : 'pages/book/book.html',
+                controller  : "bookController as book"
             });
     });

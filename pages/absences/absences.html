@@ -1,0 +1,75 @@
+<!-- about.html -->
+    <div class="jumbotron text-center">
+        <h1>List of Absences</h1>
+        <p>Table of absences is currently sorted by {{predicate}}.</p>
+       	<button ng-click="predicate=''">Remove sort</button>
+        <div class="container">
+
+	        <table>
+				<tr>
+					<th>
+						<button ng-click="order('name')">Name</button>
+	         			<span class="sortorder" ng-show="predicate === 'name'" ng-class="{reverse:reverse}"></span>
+         			</th>
+					<th>
+						<button ng-click="order('type')">Type</button>
+	         			<span class="sortorder" ng-show="predicate === 'type'" ng-class="{reverse:reverse}"></span>
+         			</th>
+					<th>
+						<button ng-click="order('start_date')">Start</button>
+	         			<span class="sortorder" ng-show="predicate === 'start_date'" ng-class="{reverse:reverse}"></span>
+         			</th>
+					<th>
+         			</th>			
+					<th>
+						<button ng-click="order('end_date')">End</button>
+	         			<span class="sortorder" ng-show="predicate === 'end_date'" ng-class="{reverse:reverse}"></span>
+         			</th>
+					<th>
+         			</th>
+					<th id="notes">Notes</th>
+					<th>
+						<button ng-click="order('status')">Status</button>
+	         			<span class="sortorder" ng-show="predicate === 'status'" ng-class="{reverse:reverse}"></span>
+         			</th>
+					<th>Actions</th>
+				</tr>
+				<tr ng-repeat="absence in absences | orderBy:predicate:reverse" ng-class="{'editing-item': editing}">
+					<td>
+						{{absence.name}}
+					</td> 
+					<td>
+						{{absence.type}}
+					</td>     
+					<td>
+						{{absence.start_date}}
+					    <input ng-blur="editing = false;" ng-show="editing" ng-model="absence.start_date" type="dateString" />						
+					</td> 
+					<td>
+						{{absence.start_time}}
+					</td> 
+					<td>
+						{{absence.end_date}}
+					    <input ng-blur="editing = false;" ng-show="editing" ng-model="absence.end_date" type="dateString" />							
+					</td> 
+					<td>
+						{{absence.end_time}}
+					</td> 
+					<td>
+						{{absence.notes}}
+					    <input ng-blur="editing = false;" ng-show="editing" ng-model="absence.notes" type="text" />
+					</td> 
+					<td>
+						{{absence.status}}
+					</td>
+					<td>
+						<div class="actions">
+				            <a href="" ng-click="editing = true">Edit</a>
+				            <a href="" ng-click="cancel(absence, $index)">Cancel</a>
+			            </div>
+		            </td>
+				</tr>
+	    	</table>
+
+    	</div>
+    </div>

@@ -1,0 +1,33 @@
+<!-- contact.html -->
+    <div class="jumbotron text-center">
+        <h1>Book New Absence</h1>
+
+        <p>Please use this form to book a new absence.</p>
+        <div class="container">
+			<form novalidate class="simple-form">
+				<label>Name</label>
+				<input type="text" ng-model="newArray.name"></input>
+				<label>Type</label>
+				<input type="text" ng-model="newArray.type"></input>
+				<label>Start Date</label>
+				<input type="date" ng-model="newArray.start_date"></input>
+				<label>Start Time</label>
+				<input type="time" ng-model="newArray.start_time"></input>
+				<label>End Date</label>
+				<input type="date" ng-model="newArray.end_date"></input>
+				<label>End Time</label>
+				<input type="time" ng-model="newArray.end_time"></input>
+				<label>Notes</label>
+				<input type="textbox" ng-model="newArray.notes"></input>
+				<input type="submit" ng-click="update(absences)" value="Book" />
+				<input type="button" ng-click="reset()" value="Reset" />
+ 			</form>  
+<!--  		<p>Name: {{absence.name}}</p><br>		
+ 			<p>Type: {{absence.type}}</p><br>
+ 			<p>Start date: {{absence.start_date | date:"dd/MM/yyyy"}}</p><br>
+ 			<p>Start time: {{absence.start_time | date:"hh:mm"}}</p><br>
+ 			<p>End date: {{absence.end_date | date:"dd/MM/yyyy"}}</p><br>
+ 			<p>End time: {{absence.end_time | date:"hh:mm"}}</p><br>
+ 			<p>Notes: {{absence.notes}}</p><br> -->
+		</div>
+    </div>
