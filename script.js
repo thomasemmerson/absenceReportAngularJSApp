@@ -22,7 +22,7 @@
             })
 
             // route for the contact page
-            .when('/contact', {
+            .when('/book', {
                 templateUrl : 'pages/book/book.html',
                 controller  : "bookController as book"
             });
